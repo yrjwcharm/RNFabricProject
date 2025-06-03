@@ -15,7 +15,7 @@ import {
   findNodeHandle,
   Dimensions,
 } from 'react-native';
-import QDGestureFloat from 'fabric-component-sample-package/src/specs/v2/QDGestureFloatNativeComponent';
+// import QDGestureFloat from 'fabric-component-sample-package/src/specs/v2/QDGestureFloatNativeComponent';
 import SelectBoxApp from './src/SelectBoxApp';
 
 const ScreenHeight = Dimensions.get('window').height;
@@ -25,14 +25,14 @@ const App = () => {
   const floatRef = useRef(null);
   return (
     <View style={styles.container}>
-      <QDGestureFloat
+      {/* <QDGestureFloat
         ref={floatRef}
         style={styles.container}
         stopPercent={0.5}
         stopPercentMax={0.75}
         onScroll={event => {
           console.log(event.nativeEvent.offsetY);
-        }}>
+        }}> */}
         <View style={{width: '100%', height: 1000, backgroundColor: 'yellow'}}>
           <Pressable
             onPress={() => {
@@ -49,7 +49,7 @@ const App = () => {
           </Pressable>
           <SelectBoxApp />
         </View>
-      </QDGestureFloat>
+      {/* </QDGestureFloat> */}
     </View>
   );
 };
